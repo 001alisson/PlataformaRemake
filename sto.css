@@ -1,0 +1,531 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    padding-left: 240px;
+    background-image: url(ImagemIlustrativa2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;    
+}
+
+/* -------------- Navegação -------------- */
+
+.nav{
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    gap: 10px;
+    align-items: center;
+    background: linear-gradient(#020020, #000c3f, #001679); 
+    z-index: 10000000;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    gap: 0;
+}
+.menu button{
+    width: 100%;
+    height: 55px;
+    text-align: start;
+    text-indent: 40px;
+    border: none;
+    color: rgb(218, 218, 218);
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: transparent;
+}
+.menu button:hover,
+.btclick{
+    background: linear-gradient(90deg, #000f3f, #001572, #001da1);
+}
+
+/*  -------------- HOME --------------  */
+.welcome{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    
+    transform: translateX(-150vw);
+    transition: 0.9s;
+    z-index: 100;
+}
+
+.ct{
+    background: linear-gradient(90deg, black, rgb(0, 0, 0), rgba(0, 0, 0, 0.829), rgba(0, 0, 0, 0.555), rgba(0, 0, 0, 0));
+    height: 100vh;
+    width: 580px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    position: relative;
+    padding-left: 40px;
+    flex-direction: column;    
+}
+.ct h1{
+    font-size: 70px;
+    font-family: sans-serif;
+    color: #f5f5f5;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px black;
+}
+.ct h2 {
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    color: #f3f3f3;
+    text-shadow: 1px 1px 2px black;
+}
+.ct p{
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 200;
+    color: #f3f3f3;    
+    text-shadow: 1px 1px 2px black;
+}
+
+/* -------------- Olimpíadas -------------- */
+
+.tela{
+    background: linear-gradient(rgb(0,0,0,0) ,#00070fa9 , #00070ff5, #00070f 65%);
+    position: absolute; 
+    top: 0;
+    
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transform: translateY(150vh);
+    height: 100vh;
+    width: calc(100vw - 240px);
+    z-index: 100;
+    align-items: center;
+    transition: 1s;
+}
+
+.aparecer_db{
+    transform: translateY(0vh);
+    transition: 0.9s;    
+}
+.aparecer_dr{
+    transform: translateX(0vw);
+    transition: 0.9s;
+}
+
+.tela::-webkit-scrollbar{
+    width: 10px;
+    z-index: 100;
+}
+.tela::-webkit-scrollbar-button{
+    display: none;
+}
+.tela::-webkit-scrollbar-track{
+    background-color: rgb(0, 0, 0, 0);
+    z-index: 100;
+}
+.tela::-webkit-scrollbar-thumb{
+    border-radius: 50px;
+    background-color: rgb(175, 175, 175, 0.6);
+    z-index: 100;
+}
+
+
+.olimps{
+    display: grid;
+    grid-template-columns: 440px 440px;
+    grid-template-rows: 400px;
+    height: fit-content;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-top: 120px;
+
+}
+.card_Olimp{
+    width: 380px;
+    height: 320px;
+    border-radius: 10px;
+    border: 1px solid rgb(55, 55, 55);
+    backdrop-filter: blur(10px);
+    transition: 0.5s;
+    cursor: pointer;
+}
+.card_Olimp:hover{
+    transform: scale(1.1) translateY(-5px);
+    transition: 0.5s;
+}
+.texto_olimp{
+    width: 880px;
+    height: 200px;
+    align-items: start;
+    justify-content: center;
+    margin-left: 130px;
+    
+}
+.texto_olimp h1{
+    color: #f5f5f5;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 60px;
+    font-weight: 600;
+}
+.texto_olimp p{
+    color: #f3f3f3;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 200;
+    font-size: 25px;
+}
+
+
+/* -------------- Vídeos -------------- */
+.voltar{
+    color: rgb(230, 230, 230);
+    font-family: arial;
+    font-size: 18px;
+    font-weight: 700;
+    
+    cursor: pointer;
+    transition: 0.9s;
+}
+.voltar:hover{
+    letter-spacing: 1.5px;
+    font-size: 19px;
+    transition: 0.9s;
+}
+
+.videotela{
+    position: absolute;
+    top: 0;
+    padding-left: 80px;
+    padding-top: 100px;
+    height: 100vh;
+    width: calc(100vw - 240px);
+    overflow-y: scroll;
+    background: linear-gradient(rgb(0,0,0,0),#00070fa9, #00070ff5, #00070f, #00070f, #00070f, #00070f);
+    transform: translateY(150vh);
+
+    transition: 1s;
+}
+.videotela::-webkit-scrollbar{
+    width: 10px;
+}
+.videotela::-webkit-scrollbar-button{
+    display: none;
+}
+.videotela::-webkit-scrollbar-track{
+    background-color: rgb(0, 0, 0, 0);
+}
+.videotela::-webkit-scrollbar-thumb{
+    border-radius: 50px;
+    background-color: rgb(175, 175, 175, 0.6);
+}
+
+.aparecer_db2{
+    transform: translateY(0);
+    transition: 1s;
+}
+
+.videos{
+    display: flex;
+    width: 97%;
+    height: fit-content;
+    justify-content: space-between;    
+}
+.video_play{
+    width: fit-content;
+    justify-content: center;
+    align-items: end;
+    
+}
+.video_play video{
+    border: 1px solid rgb(104, 104, 104);
+    border-radius: 10px;
+    background-color: black;
+}
+
+.listvideo{
+    width: 300px;
+    height: 370px;
+    background-color: transparent;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.listvideo::-webkit-scrollbar-button{
+    display: none;
+}
+.listvideo::-webkit-scrollbar{
+    width: 8px;
+}
+.listvideo::-webkit-scrollbar-thumb{
+    background-color: rgb(175, 175, 175, 0.6);
+    border-radius: 50px;
+}
+
+.vid{
+    width: 100%;
+    height: 100px;
+    border-radius: 10px;
+    color: rgb(230, 230, 230);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-left: 15px;
+    cursor: pointer;
+    transition: 0.4s;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgb(94, 94, 94);
+    transform: scale(0.9);
+}
+.vid:hover{
+    transform: scale(1);
+    transition: 0.4s;
+}
+
+
+.vid img{
+    width: 60px;
+    height: 60px;
+}
+.vid section{
+    justify-content: center;
+    align-items: start;
+}
+.vid section h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: rgb(230, 230, 230);
+}
+.vid section h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #7eb3d6;
+}
+.vid section p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(185, 185, 185);
+    font-size: 14px;
+}
+
+.interation{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+}
+
+.video_play form input{
+    width: 500px;
+    height: 40px;
+    padding: 8px;
+    font-size: 16px;
+    color: rgb(70, 70, 70);
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid gray;
+    border-radius: 50px;
+}
+.botoesD,
+#sc{
+    border: none;
+    text-align: left;
+    background-color: transparent;
+    font-size: 17px;
+    color: #bdbdbd;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    background-color: rgb(29, 29, 29);
+    width: 400px;
+    border-radius: 5px;
+    text-indent: 10px;
+    padding: 8px 10px;
+    text-decoration: none;    
+}
+#sc{
+    border: none;
+    background-color: transparent;
+    font-size: 30px;
+
+}
+.botoesD{
+    background-color: #f3f3f3;
+    color: #0053a1;
+    transition: 0.8s;
+}
+.botoesD:hover{
+    filter: drop-shadow(8px 8px rgb(80, 80, 80));
+    transition: 0.8s;
+}
+.like_deslike{
+    border-radius: 70%;
+    background-color: white; 
+    float: right;
+    width: 34px;
+    height: 34px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1.1);
+    border: 1px solid gray;
+    cursor: pointer;
+    transition: 0.9s;
+}
+.like_deslike:hover{
+    transform: scale(1.3);
+    transition: 0.9s;
+}
+
+
+.description{
+    width: 97%;
+    height: fit-content;
+
+    
+}
+.description h1{
+    color:rgb(230, 230, 230);
+    font-size: 55px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+}
+.description p{
+    color: rgb(223, 223, 223);
+    font-family: sans-serif;
+    font-size: 17px;
+    text-align: justify;
+    width: 600px;
+}
+.description h2{
+    font-size: 22px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:rgb(209, 209, 209);
+}
+
+/* -------------- Chat -------------- */
+
+.telachat{
+    background: linear-gradient(90deg, black, rgb(0, 0, 0, 0.85), rgba(0, 0, 0, 0.729), rgba(0, 0, 0, 0.455), rgba(0, 0, 0, 0) 45%);
+    position: absolute; 
+    top: 0;
+    height: 100vh;
+    width: calc(100vw - 240px);
+    padding-left: 50px;
+    padding-top: 50px;
+    overflow-y: scroll;
+    transform: translateX(-150vw);
+    transition: 1s;
+    gap: 20px;
+}
+.telachat::-webkit-scrollbar{
+    width: 10px;
+}
+.telachat::-webkit-scrollbar-button{
+    display: none;
+}
+.telachat::-webkit-scrollbar-track{
+    background-color: rgb(0, 0, 0, 0);
+}
+.telachat::-webkit-scrollbar-thumb{
+    border-radius: 50px;
+    background-color: rgb(175, 175, 175, 0.7);
+}
+
+
+.apdr{
+    transform: translateX(0);
+    transition: 1.2s;
+}
+
+/* -------------- Exposição -------------- */
+
+.telaexpo{
+    position: absolute;
+    top: 0;
+    background: linear-gradient(rgb(0,0,0,0),#00070fa9, #00070ff5, #00070f 65%);
+    width: calc(100vw - 240px);
+    height: 100vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    padding-top: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    justify-content: space-between;
+    gap: 50px;
+}
+.telaexpo::-webkit-scrollbar{
+    width: 10px;
+}
+.telaexpo::-webkit-scrollbar-button{
+    display: none;
+}
+.telaexpo::-webkit-scrollbar-track{
+    background-color: rgb(0, 0, 0, 0);
+}
+.telaexpo::-webkit-scrollbar-thumb{
+    border-radius: 50px;
+    background-color: rgb(175, 175, 175, 0.6);
+}
+
+.titexpo{
+    text-align: center;
+    font-weight: 700;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #f3f3f3;
+    font-size: 50px;
+    filter: drop-shadow(2px 2px black);
+}
+
+.trabalho{
+    width: 45%;
+    height: fit-content;
+    background-color: rgba(20, 20, 20, 0.3);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid rgba(43, 43, 43, 0.795);
+    align-items: start;
+    justify-content: center;
+    transition: 0.8s;
+    transform: scale(1.03);
+}
+.trabalho:hover{
+    transform: scale(1.04) translateY(-10px);
+    transition: 0.8s;
+}
+.trabalho img{
+    border-radius: 20px;
+    width: 100%;
+    height: fit-content;
+}
+.trabalho h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 35px;
+    color: #f3f3f3;
+    filter: drop-shadow(1px 1px black);
+    font-weight: 700;
+}
+
+.trabalho p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    color: #f0f0f0;
+    text-align: justify;
+    filter: drop-shadow(1px 1px black);
+}
+
+.readmore{
+    background-color: #07229b;
+}
