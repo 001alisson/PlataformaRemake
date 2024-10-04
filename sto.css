@@ -258,6 +258,9 @@ body{
     overflow-y: scroll;
     overflow-x: hidden;
 }
+.sumir{
+    display: none;
+}
 
 .listvideo::-webkit-scrollbar-button{
     display: none;
@@ -284,9 +287,11 @@ body{
     backdrop-filter: blur(10px);
     border: 1px solid rgb(94, 94, 94);
     transform: scale(0.9);
+    background-color: rgba(0, 0, 0, 0.05);
 }
 .vid:hover{
     transform: scale(1);
+    background-color: #000c3fbb;
     transition: 0.4s;
 }
 
@@ -321,6 +326,7 @@ body{
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    margin-top: 10px;
     width: 100%;
 }
 
@@ -361,7 +367,7 @@ body{
     color: #0053a1;
     transition: 0.8s;
 }
-.botoesD:hover{
+.botoesD:hover{    
     filter: drop-shadow(8px 8px rgb(80, 80, 80));
     transition: 0.8s;
 }
@@ -458,9 +464,10 @@ body{
     display: flex;
     flex-flow: row wrap;
     align-content: flex-start;
-    padding-top: 50px;
+    padding-top: 100px;
     padding-left: 40px;
     padding-right: 40px;
+    padding-bottom: 50px;
     justify-content: space-between;
     gap: 50px;
 }
@@ -490,7 +497,7 @@ body{
 .trabalho{
     width: 45%;
     height: fit-content;
-    background-color: rgba(20, 20, 20, 0.3);
+    background-color: rgba(20, 20, 20, 0.1);
     backdrop-filter: blur(20px);
     border-radius: 20px;
     padding: 20px;
