@@ -28,7 +28,26 @@ function IntoChat(){
 function IntoExposicao(){
     des();
     buton5();
+
+    document.querySelector(".telaexpo").classList.add("aprdb");
 }
+var m = false
+function ShowMore(){
+    m = !m
+
+    if (m){
+        document.getElementById('Btler').innerHTML = "Ler menos";
+
+        document.querySelector(".MaisSobre").classList.add("mostrar");
+        
+    }
+    else{
+        document.getElementById('Btler').innerHTML = "Ler mais";
+
+        document.querySelector(".MaisSobre").classList.remove("mostrar");
+    }
+}
+
 
 function des(){
     document.querySelector(".welcome").classList.remove("aparecer_dr");
@@ -38,6 +57,8 @@ function des(){
     document.querySelector(".videotela").classList.remove("aprecer_db2");
 
     document.querySelector(".telachat").classList.remove("apdr");
+
+    document.querySelector(".telaexpo").classList.remove("aprdb");
 };
 
 
@@ -93,6 +114,7 @@ function buton5(){
 
     botoes[4].classList.add("btclick");
 }
+
 IntoHome();
 
 
